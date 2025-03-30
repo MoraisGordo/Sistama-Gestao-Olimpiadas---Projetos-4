@@ -1,0 +1,36 @@
+@startuml
+
+node "Servidor" {
+    node "Aplicação Web" {
+        artifact "Sistema de Gestão Olímpica" {
+            [Cadastro de Competições]
+            [Inscrição de Atletas]
+            [Alocação de Locais]
+            [Controle de Resultados]
+            [Relatórios de Medalhas]
+        }
+    }
+}
+
+node "Banco de Dados" {
+    database "DB Olímpico" {
+        [Dados de Competições]
+        [Dados de Atletas]
+        [Dados de Locais]
+        [Resultados]
+        [Relatórios]
+    }
+}
+
+node "Usuário" {
+    agent "Funcionarios" 
+    agent "Atletas"
+}
+
+Funcionarios --> "Aplicação Web": Gerenciam competições e locais
+Atletas --> "Aplicação Web": Inscrevem-se nas competições
+"Aplicação Web" --> "Banco de Dados": Armazena e consulta dados
+"Banco de Dados" --> "Aplicação Web": Retorna informações
+Funcionarios --> "Aplicação Web": Consulta relatórios de medalhas
+
+@enduml
