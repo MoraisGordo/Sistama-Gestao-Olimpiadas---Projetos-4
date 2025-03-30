@@ -1,0 +1,20 @@
+@startuml
+
+' Diagrama de Caso de Uso
+actor "Atleta" as Athlete #blue
+actor "Organizador" as Organizer #green
+
+usecase "Cadastrar Competição" as UC_CadastrarCompeticao
+usecase "Realizar Inscrição" as UC_InscreverAtleta
+usecase "Alocar Local da Competição" as UC_AlocarLocal
+usecase "Vizualizar Resultados" as UC_VizualizarResultados
+usecase "Vizualizar Relatórios de Medalhas" as UC_VizualizarRelatorios
+
+Organizer --> UC_CadastrarCompeticao #green 
+Athlete --> UC_InscreverAtleta #blue
+UC_CadastrarCompeticao .> UC_AlocarLocal
+Organizer --> UC_VizualizarResultados #green
+Organizer --> UC_VizualizarRelatorios #green
+
+@enduml
+
