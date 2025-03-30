@@ -28,7 +28,7 @@ Pedro Henriquq Morais Marques
 ![](https://github.com/MoraisGordo/Sistama-Gestao-Olimpiadas---Projetos-4/blob/main/Imagens/Diagrama-de-Classes.png)
 
 ## Diagrama de Pacotes
-![]()
+![](https://github.com/MoraisGordo/Sistama-Gestao-Olimpiadas---Projetos-4/blob/main/Imagens/Diagrama%20de%20Pacotes.png)
 
 ## Diagrama de Componentes
 ![]()
