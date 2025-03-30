@@ -1,0 +1,47 @@
+@startuml
+
+' Diagrama de Classes e Pacotes
+package "SGO" {
+    class Competicao {
+        - nome: String
+        - data: Date
+        - horario: String
+        - local: Local
+        - atletas: List<Atleta>
+    }
+    
+    class Atleta {
+        - nome: String
+        - pais: Pais
+        - idade: int
+    }
+    
+    class Local {
+        - nome: String
+        - capacidade: int
+    }
+    
+    class Resultado {
+        - competicao: Competicao
+        - vencedor: Atleta
+        - segundoLugar: Atleta
+        - terceiroLugar: Atleta
+    }
+    
+    class Pais {
+        - nome: String
+        - medalhasOuro: int
+        - medalhasPrata: int
+        - medalhasBronze: int
+    }
+    
+    Competicao "1" -- "*" Atleta
+    Competicao "1" -- "1" Local
+    Resultado "1" -- "1" Competicao
+    Resultado "1" -- "1" Atleta : vencedor
+    Resultado "1" -- "1" Atleta : segundoLugar
+    Resultado "1" -- "1" Atleta : terceiroLugar
+    Atleta "1" -- "1" Pais
+}
+
+@enduml
