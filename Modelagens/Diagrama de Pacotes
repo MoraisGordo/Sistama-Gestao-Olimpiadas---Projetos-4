@@ -1,0 +1,44 @@
+@startuml
+
+package "Sistema de Gestão Olímpica" {
+    package "Gerenciamento de Competições" {
+        class Competicao {
+            
+        }
+    }
+    
+    package "Inscrição de Atletas" {
+        class Atleta {
+           
+        }
+        class Inscricao {
+           
+        }
+    }
+    
+    package "Alocação de Locais" {
+        class Local {
+            
+        }
+    }
+    
+    package "Controle de Resultados" {
+        class Resultado {
+            
+        }
+    }
+    
+    package "Relatórios de Medalhas" {
+        class RelatorioMedalhas {
+            
+        }
+    }
+}
+
+Competicao --> Local
+Competicao --> Atleta
+Atleta --> Inscricao
+Competicao --> Resultado
+Resultado --> RelatorioMedalhas
+
+@enduml
