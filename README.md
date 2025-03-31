@@ -1,5 +1,5 @@
 Pedro Henriquq Morais Marques
-
+Victor Lucas Tornelli
 
 # Sistama-Gestao-Olimpiadas---Projetos-4
 
@@ -31,5 +31,5 @@ Pedro Henriquq Morais Marques
 ![](https://github.com/MoraisGordo/Sistama-Gestao-Olimpiadas---Projetos-4/blob/main/Imagens/Diagrama%20de%20Pacotes.png)
 
 ## Diagrama de Componentes
-![]()
+![](https://github.com/MoraisGordo/Sistama-Gestao-Olimpiadas---Projetos-4/blob/main/Imagens/Diagrama%20de%20Componentes.png)
 
