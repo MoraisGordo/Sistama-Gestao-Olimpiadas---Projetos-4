@@ -1,0 +1,45 @@
+@startuml
+
+skinparam componentStyle uml2
+
+title Packages - Component Diagram
+
+package "Front End" {
+    component [Interface de Usuário] as GUI
+}
+
+cloud Internet {
+}
+ 
+node "Backend" {
+    
+    [Módulo de Inscrições]
+    [Módulo de Alocação]
+    [Módulo de Resultados]
+    [Módulo de Relatórios]
+    [Data Access] as DA  
+    
+    interface IMath as Math
+    interface "IItems" as Items
+    
+} 
+
+database "PostgreSQL\n" {
+    [Banco de Dados]
+}
+
+GUI -down-> Internet
+Internet -down-( Math
+[Módulo de Relatórios] -up- Math : Web Services
+[Módulo de Inscrições] -up- Math : Web Services
+[Módulo de Alocação] -up- Math : Web Services
+[Módulo de Resultados] -up- Math : Web Services
+[Módulo de Relatórios] -down-( Items
+[Módulo de Resultados] -down-( Items
+[Módulo de Alocação] -down-( Items
+[Módulo de Inscrições] -down-( Items
+DA -up- Items  
+
+DA .. [Banco de Dados]
+
+@enduml
